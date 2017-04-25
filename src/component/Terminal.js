@@ -16,6 +16,7 @@ class Terminal extends React.Component{
         this.showHelp = this.showHelp.bind(this);
         this.listFiles = this.listFiles.bind(this);
         this.showWelcomeMsg = this.showWelcomeMsg.bind(this);
+        this.catFile = this.catFile.bind(this);
 
     }
 
@@ -24,9 +25,9 @@ class Terminal extends React.Component{
             commands:{
                 'clear':this.clearHistory,
                 'ls':this.listFiles,
-                'intro':this,
+                'intro':this.showWelcomeMsg,
                 'help':this.showHelp,
-                'cat':this.catFile.bind(this)
+                'cat':this.catFile
             }
         });
     }
