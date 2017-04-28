@@ -9568,6 +9568,7 @@ var Terminal = function (_React$Component) {
         _this.showHelp = _this.showHelp.bind(_this);
         _this.listFiles = _this.listFiles.bind(_this);
         _this.showWelcomeMsg = _this.showWelcomeMsg.bind(_this);
+        _this.catFile = _this.catFile.bind(_this);
 
         return _this;
     }
@@ -9579,9 +9580,9 @@ var Terminal = function (_React$Component) {
                 commands: {
                     'clear': this.clearHistory,
                     'ls': this.listFiles,
-                    'intro': this,
+                    'intro': this.showWelcomeMsg,
                     'help': this.showHelp,
-                    'cat': this.catFile.bind(this)
+                    'cat': this.catFile
                 }
             });
         }

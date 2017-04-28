@@ -1,22 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import BaseComponent from './BaseComponent'
 
-class Terminal extends React.Component{
-    constructor(props){
-        super(props)
+class Terminal extends BaseComponent{
+    constructor(){
+        super()
         this.state = {
             commands: {},
             history: [],
             prompt: '$ '
         };
 
-        this.handleInput = this.handleInput.bind(this);
-        this.handleClick = this.handleClick.bind(this);
-        this.clearHistory = this.clearHistory.bind(this);
-        this.showHelp = this.showHelp.bind(this);
-        this.listFiles = this.listFiles.bind(this);
-        this.showWelcomeMsg = this.showWelcomeMsg.bind(this);
-        this.catFile = this.catFile.bind(this);
+        this._bind('handleInput','handleClick','clearHistory','showHelp','listFiles','showWelcomeMsg','catFile');
 
     }
 
