@@ -98,7 +98,7 @@ class Terminal extends BaseComponent{
     }
 
     addHistory(output){
-        var history = this.state.history;
+        const history = this.state.history;
         history.push(output)
         this.setState({
             'history': history
@@ -106,12 +106,12 @@ class Terminal extends BaseComponent{
     }
 
     handleClick(){
-        var term = ReactDOM.findDOMNode(this.refs.term);
+        const term = ReactDOM.findDOMNode(this.refs.term);
         term.focus();
     }
 
     render(){
-        var output = this.state.history.map((op,i) => {
+        const output = this.state.history.map((op,i) => {
             return <p key={i}>{op}</p>
             
         });
